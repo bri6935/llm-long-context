@@ -111,3 +111,41 @@ Clone the repository:
 ```bash
 git clone https://github.com/your-username/construct-ai.git
 cd construct-ai
+
+### Prerequisites
+
+- Python 3.x
+- An Ollama-compatible LLM server running.
+- Required Python packages: `requests`, `PyPDF2`, `google-api-python-client`, `google-auth-httplib2`, `google-auth-oauthlib`.
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/construct-ai.git
+cd construct-ai
+```
+
+Install the dependencies:
+
+
+pip install -r requirements.txt
+
+
+
+Usage
+Configure the Script
+
+Open construct_ai.py and set the following variables:
+
+FOLDERS_TO_PROCESS: A list of directories you want the script to scan (e.g., ["my_research_papers", "project_docs"]). Leave empty to scan everything.
+BASE_URL: The URL of your local LLM server (default is http://127.0.0.1:11434).
+
+Run the Script
+
+```bash
+python construct_ai.py
+```
+
+The script will automatically find new documents, process them, and save the summaries in the ai summaries/ directory.
